@@ -2,7 +2,7 @@ import { useTerminalStore } from '@/app/store/terminalStore';
 import { commands } from '../../utils/commands';
 import { TerminalButton } from './TerminalButton';
 import { useEffect, useState } from 'react';
-import { CRTWrapper } from './CRTWrapper';
+import { CRTWrapper } from '../CRTWrapper/CRTWrapper';
 
 export const ClickableTerminal: React.FC = () => {
   const { history, addToHistory, clearHistory } = useTerminalStore();

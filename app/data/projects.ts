@@ -73,4 +73,20 @@ export const projects: ProjectType[] = [
     image: '/projects/anxietysimulator.webp',
     tech: [SkillsEnum.JavaScript, SkillsEnum.TypeScript, SkillsEnum.React, SkillsEnum.NextJS, SkillsEnum.OpenAI],
   },
+  {
+    name: 'This website!',
+    description: 'A portfolio website to showcase my projects and skills',
+    role: 'Lead Software Engineer',
+    date: '2025',
+    url: 'https://shanedrice.com',
+    image: '/projects/portfolio.png',
+    tech: [
+      SkillsEnum.JavaScript,
+      SkillsEnum.TypeScript,
+      SkillsEnum.React,
+      SkillsEnum.Node,
+      SkillsEnum.Tailwind,
+      SkillsEnum.AWS,
+    ],
+  },
 ];

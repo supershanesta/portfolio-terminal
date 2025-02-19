@@ -45,7 +45,7 @@ export const SkillsEnum = {
     color: '#999999',
   },
   Tailwind: {
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     Icon: SiTailwindcss,
     color: '#06B6D4',
   },
@@ -128,4 +128,10 @@ export type ContactType = {
   linkedin: string;
   github: string;
   image: string;
+  resume: string;
+};
+
+export type AboutType = {
+  paragraphs: string[];
+  mobileParagraphs: string[];
 };

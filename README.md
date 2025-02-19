@@ -1,6 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Terminal Portfolio
 
-## Getting Started
+A modern, interactive terminal-style portfolio built with Next.js, TypeScript, and Framer Motion. This project showcases my work through a unique CRT-style interface that combines retro aesthetics with modern web technologies.
+
+## Features
+
+- 🖥️ Terminal-style interface with CRT screen effects
+- 💻 Two interaction modes:
+  - Command Line Interface (CLI)
+  - Click-through Navigation
+- 📱 Fully responsive design
+- ⌨️ Real terminal commands and interactions
+- 🎨 Retro CRT animations and effects
+- 🚀 Optimized performance with Next.js
+
+## Technology Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **State Management**: Custom hooks and stores
+
+## Key Components
+
+### Terminal Interface
+
+The terminal interface features authentic CRT-style effects including:
+
+- Scanlines with scroll-reactive intensity
+- Screen wave animations
+- CRT flicker effects
+- Command history tracking
+
+### Interactive Elements
+
+The portfolio includes several interactive elements:
+
+- Falling letter animations on hover
+- Clickable command buttons
+- Smooth transitions between sections
+- Mobile-responsive layouts
+
+### Contact Section
+
+Features a modern contact interface with:
+
+- Social media links
+- Direct email/phone contact
+- Resume download
+- Responsive icon sizing
+
+## Performance Optimizations
+
+- Lazy loading of components
+- Optimized images with Next.js Image component
+- Efficient animation handling
+- Responsive media queries for mobile optimization
+
+## Running Locally
 
 First, run the development server:
 

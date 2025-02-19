@@ -4,6 +4,7 @@ import { SkillsWrapper } from '@/app/components/Skills/SkillsWrapper';
 import { ProjectsWrapper } from '../components/Projects/ProjectsWrapper';
 import { contact } from '../data/contact';
 import ContactComponent from '../components/ContactComponent/ContactComponent';
+import About from '../components/About/About';
 
 export type HistoryItem = {
   text: string;
@@ -93,5 +94,15 @@ export const commands: Record<string, Command> = {
     description: 'Clear the terminal',
     execute: () => ({ text: '', type: 'command' }),
     isClickable: false,
+  },
+  about: {
+    name: 'about',
+    description: 'About me',
+    execute: () => ({
+      text: data.about.paragraphs.join('\n\n'),
+      component: About({}),
+      type: 'command',
+    }),
+    isClickable: true,
   },
 };
