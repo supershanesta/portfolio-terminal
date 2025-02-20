@@ -57,6 +57,27 @@ Features a modern contact interface with:
 - Efficient animation handling
 - Responsive media queries for mobile optimization
 
+## Analytics
+
+### Microsoft Clarity
+
+This project uses Microsoft Clarity for user behavior analytics, providing:
+
+- Heatmaps
+- Session recordings
+- Performance metrics
+- User behavior insights
+
+To enable Clarity in your local environment:
+
+1. Create a Microsoft Clarity project at [clarity.microsoft.com](https://clarity.microsoft.com)
+2. Get your project ID
+3. Add it to your environment variables:
+
+```bash
+NEXT_PUBLIC_CLARITY_ID=your-project-id
+```
+
 ## Running Locally
 
 First, run the development server:
