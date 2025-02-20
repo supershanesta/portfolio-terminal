@@ -1,14 +1,24 @@
+'use client';
+
 import { data } from '@/app/data/data';
 import Image from 'next/image';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
 import FallingLetters from '../FallingLetters/FallingLetters';
 import { HoverableCTA } from './HoverableCTA';
 import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 const ContactComponent: React.FC = () => {
   const { name, email, phone, linkedin, github, image, resume } = data.contact;
-
+  const [mounted, setMounted] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Default size for initial server render
+  const iconSize = mounted ? (isMobile ? 26 : 16) : 16;
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
@@ -43,7 +53,7 @@ const ContactComponent: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer hover:text-green-400 transition-colors"
               onClick={handleEmailClick}
             >
-              <FaEnvelope className="text-green-400" size={isMobile ? 26 : 16} />
+              <FaEnvelope className="text-green-400" size={iconSize} />
               <p className="hidden md:block">{email}</p>
             </div>
           </HoverableCTA>
@@ -52,7 +62,7 @@ const ContactComponent: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer hover:text-green-400 transition-colors"
               onClick={handlePhoneClick}
             >
-              <FaPhone className="text-green-400" size={isMobile ? 26 : 16} />
+              <FaPhone className="text-green-400" size={iconSize} />
               <p className="hidden md:block">{phone}</p>
             </div>
           </HoverableCTA>
@@ -63,7 +73,7 @@ const ContactComponent: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 cursor-pointer hover:text-green-400 transition-colors"
             >
-              <FaLinkedin className="text-green-400" size={isMobile ? 26 : 16} />
+              <FaLinkedin className="text-green-400" size={iconSize} />
               <p className="hidden md:block">LinkedIn Profile</p>
             </a>
           </HoverableCTA>
@@ -74,7 +84,7 @@ const ContactComponent: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 cursor-pointer hover:text-green-400 transition-colors"
             >
-              <FaGithub className="text-green-400" size={isMobile ? 26 : 16} />
+              <FaGithub className="text-green-400" size={iconSize} />
               <p className="hidden md:block">GitHub Profile</p>
             </a>
           </HoverableCTA>
@@ -83,7 +93,7 @@ const ContactComponent: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer hover:text-green-400 transition-colors"
               onClick={handleResumeClick}
             >
-              <FaFileDownload className="text-green-400" size={isMobile ? 26 : 16} />
+              <FaFileDownload className="text-green-400" size={iconSize} />
               <p className="hidden md:block">Download Resume</p>
             </div>
           </HoverableCTA>

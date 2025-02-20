@@ -1,12 +1,21 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { data } from '@/app/data/data';
 import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 const About: React.FC = () => {
   const { about } = data;
+  const [mounted, setMounted] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
-  const paragraphs = isMobile ? about.mobileParagraphs : about.paragraphs;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Use default paragraphs for initial render
+  const paragraphs = mounted ? (isMobile ? about.mobileParagraphs : about.paragraphs) : about.paragraphs;
 
   return (
     <div className="prose prose-invert max-w-none space-y-4">
