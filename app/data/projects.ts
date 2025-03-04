@@ -46,7 +46,7 @@ export const projects: ProjectType[] = [
       SkillsEnum.Python,
     ],
   },
-  {
+  /*{
     name: 'Ticket Artisan',
     description: 'Create technical tickets based on screenshots from figma and design files',
     role: 'Creator & Software Engineer',
@@ -72,7 +72,7 @@ export const projects: ProjectType[] = [
     url: 'https://anxietysimulator.com',
     image: '/projects/anxietysimulator.webp',
     tech: [SkillsEnum.JavaScript, SkillsEnum.TypeScript, SkillsEnum.React, SkillsEnum.NextJS, SkillsEnum.OpenAI],
-  },
+  }*/
   {
     name: 'This website!',
     description: 'A portfolio website to showcase my projects and skills',
@@ -86,6 +86,23 @@ export const projects: ProjectType[] = [
       SkillsEnum.React,
       SkillsEnum.Node,
       SkillsEnum.Tailwind,
+      SkillsEnum.AWS,
+    ],
+  },
+  {
+    name: 'Surf Tracker',
+    description: 'A website to track your surf activities with friends!',
+    role: 'Lead Software Engineer',
+    date: '2025',
+    url: 'https://surf.shanedrice.com',
+    image: '/projects/surf_tracker.png',
+    tech: [
+      SkillsEnum.JavaScript,
+      SkillsEnum.TypeScript,
+      SkillsEnum.React,
+      SkillsEnum.Node,
+      SkillsEnum.Tailwind,
+      SkillsEnum.PostgreSQL,
       SkillsEnum.AWS,
     ],
   },
