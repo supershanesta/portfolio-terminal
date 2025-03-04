@@ -22,7 +22,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: 'Dermsquared',
-    description: 'A website for a dermatologist',
+    description: 'A website for dermatologists to view the latest and greatest information',
     role: 'Technical Product Manager | Software Engineer',
     date: '2023',
     url: 'https://dermsquared.com',
